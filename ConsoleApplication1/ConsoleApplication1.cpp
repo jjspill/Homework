@@ -14,14 +14,13 @@ int main() {
 	for (int i = 0; i < 7; i++) {
 		cin >> homework[i];
 	}
-	cout << printhw(homework) << endl;
-
-    return 1;
+	printhw(homework);
+	cout << homework[1];
 }
 
 void printhw(string homework[]) {
 	for (int i = 0; i < 7; i++) {
-		string rstring = (i + 1) + ": " + homework[i];
-		cout << rstring << endl;
+		cout << (i + 1) + ": " + homework[i];
+
 	}
 }
