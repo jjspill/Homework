@@ -1,15 +1,19 @@
-﻿// ConsoleApplication1.cpp : Defines the entry point for the console application.
+// ConsoleApplication1.cpp : Defines the entry point for the console application.
 //
-#include "stdafx.h"
 #include <iostream>
 #include <string>
 #include <sstream>
-using namespace std;
+#include <array>
 
-void printhw(string homework[]);
+using namespace std;
+struct assignments {
+    string name;
+    bool done;
+}
+void printhw(std::array<string, 7> homework);
 
 int main() {
-	string homework[7];
+	std::array<string, 7> homework;
 	cout << "What homework do you have today?" << endl;
 	for (int i = 0; i < 7; i++) {
 		cin >> homework[i];
@@ -18,9 +22,11 @@ int main() {
 	cout << homework[1];
 }
 
-void printhw(string homework[]) {
+void printhw(std::array<string, 7> homework) {
 	for (int i = 0; i < 7; i++) {
-		cout << (i + 1) + ": " + homework[i];
-
+		cout << (i + 1) << ": " << homework[i] << endl;
 	}
 }
+//post print- assignments
+//files
+//serialization
